@@ -1,10 +1,20 @@
 
 #include <iostream>
+using namespace std;
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    unsigned long long n;
-    if (!(std::cin >> n)) return 0;
-    // TODO: reverse using % and /, not strings
+    int cislo;
+    cin >> cislo;
+    
+    int obratene_cislo = 0;
+    if (cislo == 0) {
+        cout << 0;
+    } else {
+        while (cislo > 0) {
+            int cifra = cislo % 10;        
+        obratene_cislo = obratene_cislo * 10 + cifra;
+        cislo = cislo / 10;
+        }
+        cout << obratene_cislo;
+    }
     return 0;
 }
