@@ -1,11 +1,17 @@
 
 #include <iostream>
 #include <vector>
+
+using namespace std;
+
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    int n; 
-    if (!(std::cin >> n)) return 0;
-    // TODO: read n values in [0,100], count, and print only those with count>0 in ascending value
+    int number[] = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    char cislo = 5;
+
+    cout << sizeof(number) / 4 << '\n';
+
+    for (int i = 0; i < 24; i++) {
+        cout << number[i] << '\n';
+    }
     return 0;
 }
