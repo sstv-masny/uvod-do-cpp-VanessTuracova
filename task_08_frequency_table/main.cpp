@@ -5,13 +5,25 @@
 using namespace std;
 
 int main() {
-    int number[] = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    char cislo = 5;
+    int n;
+    cin >> n;
 
-    cout << sizeof(number) / 4 << '\n';
+    int numbers[1000]; 
 
-    for (int i = 0; i < 24; i++) {
-        cout << number[i] << '\n';
+    for (int i = 0; i < n; i++) {
+        cin >> numbers[i];
+    }
+    for (int value = 0; value <= 100; value++) {
+        int count = 0;
+
+     for (int i = 0; i < n; i++) {
+        if (numbers[i] == value) {
+        count++;
+         }
+        }
+        if (count > 0) {
+            cout << value << " " << count << endl;
+        }
     }
     return 0;
 }
