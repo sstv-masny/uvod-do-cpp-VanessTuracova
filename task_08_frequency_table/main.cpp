@@ -1,20 +1,23 @@
-
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
 int main() {
-    int n[101] = {};
+    int n;
+    cin >> n;
 
-    n[1] += 1;
-    n[2] += 1;
-    n[2] += 1;
-    n[100] += 1;
-    n[10] += 1;
+    int pocet[101] = {};
 
-    for (int pocet : n) {
-        cout << pocet << " ";
+    for (int i = 0; i < n; i++) {
+        int cislo;
+        cin >> cislo;
+        pocet[cislo]++;
     }
+
+    for (int i = 0; i <= 100; i++) {
+        if (pocet[i] > 0) {
+            cout << i << " " << pocet[i] << endl;
+        }
+    }
+
     return 0;
 }
