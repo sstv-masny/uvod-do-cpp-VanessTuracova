@@ -1,16 +1,15 @@
 
 #include <iostream>
+using namespace std;
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    long long n;
+    int n;
+    cout << "zadaj n";
+    cin >> n;
 
-    std::cout << "Nacital cislo:";
-
-    std::cin >> n;
-
-    if (!(n))
-        return 0;
-
+    if (n % 2 == 0)
+        cout << "číslo je párne" << endl;
+    else {
+        cout << "číslo je nepárne" << endl;
+    }
     return 0;
 }

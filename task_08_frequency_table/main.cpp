@@ -18,6 +18,5 @@ int main() {
             cout << i << " " << pocet[i] << endl;
         }
     }
-
     return 0;
 }
